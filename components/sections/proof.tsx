@@ -1,0 +1,79 @@
+"use client"
+
+import { motion } from "framer-motion"
+import { TrendingUp, Calendar, BarChart3, Repeat } from "lucide-react"
+
+const wins = [
+  {
+    icon: TrendingUp,
+    headline: "First sales within 14 days",
+    description: "New creators seeing their first TikTok Shop sales within two weeks of starting.",
+  },
+  {
+    icon: Calendar,
+    headline: "Consistent daily posting system",
+    description: "Building sustainable habits that compound over time.",
+  },
+  {
+    icon: BarChart3,
+    headline: "Improved conversion rate",
+    description: "Content that actually turns viewers into paying customers.",
+  },
+  {
+    icon: Repeat,
+    headline: "Found repeatable product strategy",
+    description: "A framework for finding winners again and again.",
+  },
+]
+
+export function ProofSection() {
+  return (
+    <section className="bg-secondary/30 py-20 sm:py-28">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center"
+        >
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            Client Wins
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Real results from creators in the program
+          </p>
+        </motion.div>
+
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {wins.map((win, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 * index }}
+              className="rounded-2xl border border-border/40 bg-card p-6"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
+                <win.icon className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="mt-4 font-semibold text-foreground">{win.headline}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{win.description}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-8 text-center text-sm text-muted-foreground"
+        >
+          Results vary. Success depends on effort and consistency.
+        </motion.p>
+      </div>
+    </section>
+  )
+}
