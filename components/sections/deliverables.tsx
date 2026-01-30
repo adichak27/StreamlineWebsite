@@ -57,8 +57,12 @@ const deliverables = [
 
 export function DeliverablesSection() {
   return (
-    <section id="what-you-get" className="bg-background py-20 sm:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="what-you-get" className="relative bg-background py-20 sm:py-28 overflow-hidden">
+      {/* Gradient overlay - top corners */}
+      <div className="absolute top-0 left-0 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent blur-3xl opacity-40 pointer-events-none" />
+      <div className="absolute top-0 right-0 h-[500px] w-[500px] rounded-full bg-gradient-to-bl from-primary/10 via-primary/5 to-transparent blur-3xl opacity-40 pointer-events-none" />
+      
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -82,9 +86,9 @@ export function DeliverablesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.05 * index }}
-              className="group rounded-2xl border border-border/40 bg-card p-6 transition-all hover:border-primary/40 hover:bg-card/80"
+              className="group rounded-2xl border border-primary/20 bg-gradient-to-br from-card via-card/95 to-card p-6 transition-all hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary/20">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary/20 via-primary/15 to-primary/20 transition-all group-hover:from-primary/30 group-hover:via-primary/25 group-hover:to-primary/30">
                 <item.icon className="h-6 w-6 text-primary" />
               </div>
               <h3 className="mt-4 font-semibold text-foreground">{item.title}</h3>

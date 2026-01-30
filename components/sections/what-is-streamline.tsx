@@ -12,8 +12,13 @@ const benefits = [
 
 export function WhatIsStreamlineSection() {
   return (
-    <section className="bg-secondary/30 py-20 sm:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-gradient-to-b from-secondary/30 via-secondary/20 to-background py-20 sm:py-28 overflow-hidden">
+      {/* Gradient overlay - center */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="h-[600px] w-[600px] rounded-full bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 blur-3xl opacity-50" />
+      </div>
+      
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -44,9 +49,9 @@ export function WhatIsStreamlineSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: 0.1 * index }}
-                className="flex items-start gap-4 rounded-xl border border-border/40 bg-card p-4"
+                className="flex items-start gap-4 rounded-xl border border-primary/20 bg-gradient-to-br from-card via-card/95 to-card p-4 shadow-sm shadow-primary/5"
               >
-                <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary/20 via-primary/15 to-primary/20">
                   <Check className="h-4 w-4 text-primary" />
                 </div>
                 <span className="text-foreground">{benefit}</span>

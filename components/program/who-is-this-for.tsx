@@ -19,8 +19,12 @@ const notForYou = [
 
 export function WhoIsThisFor() {
   return (
-    <section className="bg-secondary/30 py-20 sm:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-secondary/30 py-20 sm:py-28 overflow-hidden">
+      {/* Gradient overlays - bottom corners */}
+      <div className="absolute bottom-0 left-0 h-[400px] w-[400px] rounded-full bg-gradient-to-tr from-primary/10 via-primary/5 to-transparent blur-3xl opacity-40 pointer-events-none" />
+      <div className="absolute bottom-0 right-0 h-[400px] w-[400px] rounded-full bg-gradient-to-tl from-primary/10 via-primary/5 to-transparent blur-3xl opacity-40 pointer-events-none" />
+      
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -42,13 +46,13 @@ export function WhoIsThisFor() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="rounded-2xl border border-primary/40 bg-card p-8"
+            className="rounded-2xl border border-primary/30 bg-gradient-to-br from-card via-card/95 to-card p-8 shadow-lg shadow-primary/10"
           >
             <h3 className="text-xl font-semibold text-foreground">This is for you if...</h3>
             <ul className="mt-6 space-y-4">
               {forYou.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10">
+                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary/20 via-primary/15 to-primary/20">
                     <Check className="h-4 w-4 text-primary" />
                   </div>
                   <span className="text-muted-foreground">{item}</span>
@@ -62,13 +66,13 @@ export function WhoIsThisFor() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="rounded-2xl border border-border/40 bg-card p-8"
+            className="rounded-2xl border border-primary/20 bg-gradient-to-br from-card via-card/95 to-card p-8 shadow-sm shadow-primary/5"
           >
             <h3 className="text-xl font-semibold text-foreground">This is NOT for you if...</h3>
             <ul className="mt-6 space-y-4">
               {notForYou.map((item, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-destructive/10">
+                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-destructive/20 via-destructive/15 to-destructive/20">
                     <X className="h-4 w-4 text-destructive" />
                   </div>
                   <span className="text-muted-foreground">{item}</span>

@@ -23,7 +23,7 @@ const steps = [
 
 export function WhatHappensNext() {
   return (
-    <section className="bg-secondary/30 py-16 sm:py-20">
+    <section className="bg-gradient-to-b from-secondary/30 via-secondary/20 to-background py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -45,9 +45,9 @@ export function WhatHappensNext() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 * index }}
-              className="flex items-start gap-4 rounded-xl border border-border/40 bg-card p-5"
+              className="flex items-start gap-4 rounded-xl border border-primary/20 bg-gradient-to-br from-card via-card/95 to-card p-5 shadow-sm shadow-primary/5"
             >
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-primary/20 via-primary/15 to-primary/20">
                 <step.icon className="h-5 w-5 text-primary" />
               </div>
               <div>

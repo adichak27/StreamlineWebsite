@@ -14,10 +14,10 @@ export function PrepCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="relative overflow-hidden rounded-3xl border border-primary/20 bg-primary/5 px-6 py-16 sm:px-12 sm:py-20"
+          className="relative overflow-hidden rounded-3xl border border-primary/30 bg-gradient-to-br from-primary/10 via-primary/5 to-primary/10 px-6 py-16 sm:px-12 sm:py-20"
         >
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute left-1/2 top-1/2 h-[400px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl" />
+            <div className="absolute left-1/2 top-1/2 h-[400px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-primary/20 via-primary/15 to-primary/20 blur-3xl" />
           </div>
 
           <div className="relative text-center">

@@ -16,7 +16,7 @@ const checklistItems = [
 
 export function PreCallChecklistSection() {
   return (
-    <section className="bg-secondary/30 py-20 sm:py-28">
+    <section className="bg-gradient-to-b from-secondary/30 via-secondary/20 to-background py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl">
           <motion.div
@@ -39,7 +39,7 @@ export function PreCallChecklistSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-10 rounded-2xl border border-border/40 bg-card p-8"
+            className="mt-10 rounded-2xl border border-primary/20 bg-gradient-to-br from-card via-card/95 to-card p-8 shadow-lg shadow-primary/10"
           >
             <ul className="space-y-4">
               {checklistItems.map((item, index) => (
@@ -51,7 +51,7 @@ export function PreCallChecklistSection() {
                   transition={{ duration: 0.3, delay: 0.1 * index }}
                   className="flex items-center gap-3"
                 >
-                  <CheckSquare className="h-5 w-5 shrink-0 text-primary" />
+                  <CheckSquare className="h-5 w-5 shrink-0 text-primary drop-shadow-sm" />
                   <span className="text-foreground">{item}</span>
                 </motion.li>
               ))}

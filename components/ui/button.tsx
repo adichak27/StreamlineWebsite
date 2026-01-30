@@ -9,15 +9,15 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-primary text-primary-foreground hover:bg-primary/90',
+        default: 'bg-gradient-to-r from-primary via-primary to-primary/90 text-primary-foreground hover:from-primary/90 hover:via-primary/90 hover:to-primary/80 shadow-lg shadow-primary/20',
         destructive:
-          'bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60',
+          'bg-gradient-to-r from-destructive via-destructive to-destructive/90 text-white hover:from-destructive/90 hover:via-destructive/90 hover:to-destructive/80 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60',
         outline:
-          'border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50',
+          'border border-primary/30 bg-gradient-to-br from-background via-background/95 to-background shadow-xs hover:border-primary/50 hover:bg-gradient-to-br hover:from-accent/50 hover:via-accent/40 hover:to-accent/50 hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50',
         secondary:
-          'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+          'bg-gradient-to-br from-secondary via-secondary/95 to-secondary text-secondary-foreground hover:from-secondary/90 hover:via-secondary/90 hover:to-secondary/80',
         ghost:
-          'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50',
+          'hover:bg-gradient-to-br hover:from-accent/50 hover:via-accent/40 hover:to-accent/50 hover:text-accent-foreground dark:hover:bg-accent/50',
         link: 'text-primary underline-offset-4 hover:underline',
       },
       size: {

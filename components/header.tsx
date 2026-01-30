@@ -16,13 +16,13 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 w-full border-b border-primary/20 bg-gradient-to-r from-background/90 via-background/95 to-background/90 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
           <span className="text-xl font-bold tracking-tight text-foreground">
             Streamline
           </span>
-          <span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">
+          <span className="rounded-full bg-gradient-to-r from-primary/20 via-primary/15 to-primary/20 px-2 py-0.5 text-xs font-medium text-primary border border-primary/20">
             TikTok Shop
           </span>
         </Link>

@@ -15,7 +15,7 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/40 bg-background">
+    <footer className="border-t border-primary/20 bg-gradient-to-b from-background via-background/95 to-secondary/10">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid gap-8 md:grid-cols-4">
           <div className="md:col-span-2">
@@ -74,7 +74,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-border/40 pt-8">
+        <div className="mt-12 border-t border-primary/20 pt-8">
           <p className="text-center text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} Streamline. All rights reserved.
           </p>

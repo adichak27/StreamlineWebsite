@@ -4,9 +4,9 @@ import { motion } from "framer-motion"
 
 export function PrepHero() {
   return (
-    <section className="relative overflow-hidden bg-background py-20 sm:py-28">
+    <section className="relative overflow-hidden bg-gradient-to-b from-background via-background to-secondary/20 py-20 sm:py-28">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute left-1/2 top-0 h-[500px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/5 blur-3xl" />
+        <div className="absolute left-1/2 top-0 h-[500px] w-[800px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -16,7 +16,7 @@ export function PrepHero() {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-3xl text-center"
         >
-          <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5">
+          <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-gradient-to-r from-primary/20 via-primary/15 to-primary/20 px-4 py-1.5 backdrop-blur-sm">
             <span className="text-sm font-medium text-primary">Before Your Call</span>
           </div>
 

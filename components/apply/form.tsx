@@ -56,14 +56,14 @@ export function ApplicationForm() {
 
   if (submitted) {
     return (
-      <section className="bg-background py-20 sm:py-28">
+      <section className="bg-gradient-to-b from-background via-background to-secondary/10 py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="mx-auto max-w-lg rounded-2xl border border-primary/40 bg-card p-8 text-center"
+            className="mx-auto max-w-lg rounded-2xl border border-primary/30 bg-gradient-to-br from-card via-card/95 to-card p-8 text-center shadow-lg shadow-primary/10"
           >
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary/20 via-primary/15 to-primary/20">
               <Check className="h-8 w-8 text-primary" />
             </div>
             <h2 className="mt-4 text-2xl font-bold text-foreground">Application Submitted!</h2>
@@ -86,7 +86,7 @@ export function ApplicationForm() {
   }
 
   return (
-    <section className="bg-background py-20 sm:py-28">
+    <section className="bg-gradient-to-b from-background via-background to-secondary/10 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -95,7 +95,7 @@ export function ApplicationForm() {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-lg"
         >
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6 rounded-2xl border border-primary/20 bg-gradient-to-br from-card/50 via-card/30 to-card/50 p-8 shadow-lg shadow-primary/5">
             <div className="grid gap-6 sm:grid-cols-2">
               <div>
                 <Label htmlFor="name">Full Name *</Label>

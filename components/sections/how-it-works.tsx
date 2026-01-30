@@ -38,8 +38,24 @@ const steps = [
 
 export function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="bg-background py-20 sm:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section 
+      id="how-it-works" 
+      className="relative overflow-hidden bg-background py-20 sm:py-28"
+    >
+      {/* Video Background */}
+      <video
+        autoPlay
+        muted
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover opacity-60 -z-10"
+      >
+        <source src="/hero_bg.mp4" type="video/mp4" />
+      </video>
+      
+      {/* Dark gradient overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/50 via-background/40 to-background/50 z-0" />
+      
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -71,14 +87,14 @@ export function HowItWorksSection() {
                   className="relative flex gap-6"
                 >
                   <div className="relative hidden md:block">
-                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-border bg-card">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl border border-primary/30 bg-gradient-to-br from-card via-card/95 to-card shadow-sm shadow-primary/5">
                       <step.icon className="h-6 w-6 text-primary" />
                     </div>
                   </div>
 
-                  <div className="flex-1 rounded-2xl border border-border/40 bg-card p-6 transition-colors hover:border-primary/40">
+                  <div className="flex-1 rounded-2xl border border-primary/20 bg-gradient-to-br from-card via-card/95 to-card p-6 transition-all hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10">
                     <div className="flex items-start gap-4">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 md:hidden">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary/20 via-primary/15 to-primary/20 md:hidden">
                         <step.icon className="h-5 w-5 text-primary" />
                       </div>
                       <div className="flex-1">

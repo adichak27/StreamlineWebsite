@@ -7,18 +7,24 @@ import { Target, ArrowRight } from "lucide-react"
 
 export function FinalCTASection() {
   return (
-    <section className="bg-background py-20 sm:py-28">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-background py-20 sm:py-28 overflow-hidden">
+      {/* Gradient overlays - all corners */}
+      <div className="absolute top-0 left-0 h-[300px] w-[300px] rounded-full bg-gradient-to-br from-primary/10 via-primary/5 to-transparent blur-3xl opacity-30 pointer-events-none" />
+      <div className="absolute top-0 right-0 h-[300px] w-[300px] rounded-full bg-gradient-to-bl from-primary/10 via-primary/5 to-transparent blur-3xl opacity-30 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 h-[300px] w-[300px] rounded-full bg-gradient-to-tr from-primary/10 via-primary/5 to-transparent blur-3xl opacity-30 pointer-events-none" />
+      <div className="absolute bottom-0 right-0 h-[300px] w-[300px] rounded-full bg-gradient-to-tl from-primary/10 via-primary/5 to-transparent blur-3xl opacity-30 pointer-events-none" />
+      
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="relative overflow-hidden rounded-3xl border border-primary/20 bg-primary/5 px-6 py-16 sm:px-12 sm:py-20"
+          className="relative overflow-hidden rounded-3xl border border-primary/30 bg-gradient-to-br from-primary/10 via-primary/5 to-primary/10 px-6 py-16 sm:px-12 sm:py-20"
         >
           {/* Background glow */}
           <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute left-1/2 top-1/2 h-[400px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl" />
+            <div className="absolute left-1/2 top-1/2 h-[400px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-primary/20 via-primary/15 to-primary/20 blur-3xl" />
           </div>
 
           <div className="relative text-center">
