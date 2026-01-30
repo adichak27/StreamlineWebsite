@@ -14,17 +14,24 @@ const trustItems = [
 
 export function HeroSection() {
   return (
-    <section className="relative h-screen w-full overflow-hidden bg-gradient-to-b from-background via-background to-secondary/20">
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
+    <section className="relative h-screen w-full overflow-hidden">
+      {/* Video Background - primary element */}
+      <video
+        autoPlay
+        muted
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover z-0"
+      >
+        <source src="/tiktok_background.mp4" type="video/mp4" />
+      </video>
       
       {/* Content */}
-      <div className="relative mx-auto flex h-full max-w-7xl flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
+      <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col items-start justify-center px-4 sm:px-6 lg:px-8">
+        <div className="max-w-3xl text-left -translate-x-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.5, delay: 4.0 }}
           >
             <span className="inline-block rounded-full border border-primary/30 bg-gradient-to-r from-primary/20 via-primary/15 to-primary/20 px-4 py-1.5 text-sm font-medium text-primary backdrop-blur-sm">
               1:1 Livestream Coaching Program
@@ -34,27 +41,17 @@ export function HeroSection() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="mt-8 text-balance text-4xl font-bold tracking-tight text-foreground drop-shadow-2xl sm:text-5xl lg:text-6xl"
+            transition={{ duration: 0.5, delay: 4.1 }}
+            className="mt-8 text-balance text-4xl font-bold tracking-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] sm:text-5xl lg:text-6xl"
           >
-            Everything you need to win on TikTok Shop — with a real system and real support.
+            Streamline — The complete system for winning on TikTok Shop.
           </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-6 text-pretty text-lg text-foreground drop-shadow-lg sm:text-xl"
-          >
-            Streamline is a hands-on coaching program built to help creators pick winning products, 
-            create content that converts, and scale consistently.
-          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
+            transition={{ duration: 0.5, delay: 4.3 }}
+            className="mt-10 flex flex-col items-start gap-4 sm:flex-row"
           >
             <Button size="lg" asChild className="w-full sm:w-auto">
               <Link href="/prep">
@@ -74,8 +71,8 @@ export function HeroSection() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-20"
+          transition={{ duration: 0.5, delay: 4.4 }}
+          className="mt-20 -translate-x-4"
         >
           <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-card/80 via-card/60 to-card/80 p-6 backdrop-blur-sm shadow-lg shadow-primary/5">
             <div className="grid grid-cols-2 gap-6 md:grid-cols-4">

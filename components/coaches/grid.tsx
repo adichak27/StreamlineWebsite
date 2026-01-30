@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { User } from "lucide-react"
+import Image from "next/image"
 import Link from "next/link"
 
 const coaches = [
@@ -21,7 +21,7 @@ const coaches = [
     name: "Azam",
     role: "1:1 Coach",
     specialty: "Live Streaming & High-Volume Sales",
-    bio: "Azam has been a TikTok Shop Affiliate for 2+ years. He's amassed over 3 Mil dollars in GMV and was the number 1 live streamer for Goli in 2025.",
+    bio: "Azam has been a TikTok Shop Affiliate for 2+ years. He's amassed over $1 million in GMV and was the number 1 live streamer for Goli in 2025.",
     helps: [
       "Mastering high-converting livestreams",
       "Scaling to top-tier performance",
@@ -85,38 +85,76 @@ const coaches = [
 
 export function CoachesGrid() {
   return (
-    <section id="coaches" className="relative bg-secondary/30 py-20 sm:py-28 overflow-hidden">
+    <section id="coaches" className="relative bg-gradient-to-b from-primary/5 via-background to-primary/7 py-20 sm:py-28 overflow-hidden">
+      {/* Soft teal radial glow - center */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div 
+          className="h-[850px] w-[850px] rounded-full blur-[170px] opacity-45"
+          style={{
+            background: 'radial-gradient(circle, oklch(0.75 0.15 185 / 0.09) 0%, oklch(0.75 0.15 185 / 0.04) 50%, transparent 100%)'
+          }}
+        />
+      </div>
+      
       {/* Gradient overlay - top center */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 h-[500px] w-[800px] bg-gradient-to-b from-primary/12 via-primary/6 to-transparent blur-3xl opacity-50 pointer-events-none" />
       
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          initial={{ opacity: 0, y: 35, scale: 0.96 }}
+          whileInView={{ opacity: 1, y: 0, scale: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <motion.h2 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4 }}
+            className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
+          >
             Meet the Coaches and Staff
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          </motion.h2>
+          <motion.p 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-4 text-lg text-muted-foreground"
+          >
             Learn from people who&apos;ve actually built successful TikTok Shop businesses
-          </p>
+          </motion.p>
         </motion.div>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.4, delay: 0.3 }}
+          className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
+        >
           {coaches.map((coach, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 * index }}
+              initial={{ opacity: 0, y: 50, scale: 0.88, rotateY: 20 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1, rotateY: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ 
+                duration: 0.6, 
+                delay: 0.1 * index,
+                ease: [0.16, 1, 0.3, 1]
+              }}
               className="rounded-2xl border border-primary/20 bg-gradient-to-br from-card via-card/95 to-card p-6 shadow-sm shadow-primary/5"
             >
               <div className="flex items-start gap-4">
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/20 via-primary/15 to-primary/20">
-                  <User className="h-8 w-8 text-primary" />
+                <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-2xl border border-primary/20">
+                  <Image
+                    src="/azam_profile_pic.PNG"
+                    alt={`${coach.name} profile picture`}
+                    fill
+                    className="object-cover scale-125"
+                    style={{ objectPosition: 'center center' }}
+                  />
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-foreground">{coach.name}</h3>
@@ -139,7 +177,7 @@ export function CoachesGrid() {
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )
