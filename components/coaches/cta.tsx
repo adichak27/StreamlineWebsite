@@ -26,8 +26,7 @@ export function CoachesCTA() {
           <div className="mt-8">
             <Button size="lg" asChild>
               <Link href="/prep">
-                <Target className="mr-2 h-4 w-4" />
-                Confirm My Call
+                Pre-Call Prep
               </Link>
             </Button>
           </div>

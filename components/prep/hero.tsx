@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { CalendarCheck } from "lucide-react"
 
 export function PrepHero() {
   return (
@@ -18,7 +17,6 @@ export function PrepHero() {
           className="mx-auto max-w-3xl text-center"
         >
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-4 py-1.5">
-            <CalendarCheck className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium text-primary">Before Your Call</span>
           </div>
 

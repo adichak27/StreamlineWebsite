@@ -59,8 +59,7 @@ export function HeroSection() {
           >
             <Button size="lg" asChild className="w-full sm:w-auto">
               <Link href="/prep">
-                <Target className="mr-2 h-4 w-4" />
-                Confirm My Call
+                Pre-Call Prep
               </Link>
             </Button>
             <Button variant="outline" size="lg" asChild className="w-full sm:w-auto bg-transparent">

@@ -32,8 +32,7 @@ export function FinalCTASection() {
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <Button size="lg" asChild className="w-full sm:w-auto">
                 <Link href="/prep">
-                  <Target className="mr-2 h-4 w-4" />
-                  Confirm My Call
+                  Pre-Call Prep
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild className="w-full sm:w-auto bg-transparent">
