@@ -26,8 +26,7 @@ export function PrepHero() {
             Pre-Call Prep: Get the Most Out of Your Streamline Call
           </h1>
 
-          <p className="mt-6 text-pretty text-lg text-muted-foreground">
-            Show up prepared and we&apos;ll make every minute count. 
+          <p className="mt-6 text-pretty text-lg text-muted-foreground"> 
             Complete the steps below before your scheduled call.
           </p>
         </motion.div>

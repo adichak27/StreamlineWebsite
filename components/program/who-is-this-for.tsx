@@ -5,18 +5,16 @@ import { Check, X } from "lucide-react"
 
 const forYou = [
   "You want to build a real business on TikTok Shop",
-  "You're willing to go live consistently and take 1:1 feedback",
+  "You want personalized 1:1 coaching and structure, not just general information",
   "You have 10-15 hours a week to commit",
   "You're coachable and ready to follow a proven livestream system",
-  "You want personalized 1:1 coaching and structure, not just information",
 ]
 
 const notForYou = [
   "You're looking for get-rich-quick schemes",
-  "You're not willing to go live consistently",
   "You expect results without putting in work",
   "You're not open to 1:1 feedback or changing your approach",
-  "You just want to watch livestreams without taking action",
+  "You just want to watch education content without taking action",
 ]
 
 export function WhoIsThisFor() {

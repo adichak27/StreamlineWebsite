@@ -37,10 +37,10 @@ export function FinalCTASection() {
                 </Link>
               </Button>
               <Button variant="outline" size="lg" asChild className="w-full sm:w-auto bg-transparent">
-                <Link href="/apply">
+                <a href="https://form.typeform.com/to/C2ruNSz7#ref=adi" target="_blank" rel="noopener noreferrer">
                   Apply for Streamline
                   <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+                </a>
               </Button>
             </div>
           </div>

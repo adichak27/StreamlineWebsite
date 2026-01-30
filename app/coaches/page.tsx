@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { CoachesHero } from "@/components/coaches/hero"
 import { CoachesGrid } from "@/components/coaches/grid"
-import { WhyStreamlineWorks } from "@/components/coaches/why-it-works"
 import { CoachesCTA } from "@/components/coaches/cta"
 
 export const metadata: Metadata = {
@@ -14,7 +13,6 @@ export default function CoachesPage() {
     <>
       <CoachesHero />
       <CoachesGrid />
-      <WhyStreamlineWorks />
       <CoachesCTA />
     </>
   )

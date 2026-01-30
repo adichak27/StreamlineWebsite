@@ -5,10 +5,6 @@ import { CheckSquare } from "lucide-react"
 
 const checklistItems = [
   {
-    title: "Your TikTok @username",
-    description: "We'll review your profile to give personalized feedback.",
-  },
-  {
     title: "What niche you're in (or want to be in)",
     description: "Helps us understand your target market and product opportunities.",
   },

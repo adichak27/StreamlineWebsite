@@ -22,7 +22,7 @@ export function PrepCTA() {
 
           <div className="relative text-center">
             <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Ready for Your Call?
+            Your Call Is Reserved!
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
               Once you&apos;ve completed the prep above, confirm your call and we&apos;ll see you there.
@@ -36,10 +36,10 @@ export function PrepCTA() {
                 </a>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link href="/apply">
+                <a href="https://form.typeform.com/to/C2ruNSz7#ref=adi" target="_blank" rel="noopener noreferrer">
                   Submit Application
                   <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+                </a>
               </Button>
             </div>
           </div>

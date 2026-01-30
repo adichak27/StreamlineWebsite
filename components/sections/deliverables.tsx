@@ -20,13 +20,13 @@ const deliverables = [
   },
   {
     icon: Lightbulb,
-    title: "Livestream Hook Formulas",
-    description: "Attention-grabbing hooks that stop the scroll and drive engagement during your livestreams.",
+    title: "Content Hook Formulas",
+    description: "Attention-grabbing hooks that stop the scroll and drive engagement.",
   },
   {
     icon: FileText,
-    title: "Livestream Script Templates",
-    description: "Fill-in-the-blank scripts that convert viewers into buyers during your livestreams.",
+    title: "Script Templates",
+    description: "Fill-in-the-blank scripts that convert viewers into buyers.",
   },
   {
     icon: Calendar,
@@ -40,8 +40,8 @@ const deliverables = [
   },
   {
     icon: Pencil,
-    title: "1:1 Livestream Feedback",
-    description: "Direct 1:1 feedback on your livestreams with actionable improvements.",
+    title: "Creative Feedback + Revisions",
+    description: "Direct feedback on your content with actionable improvements.",
   },
   {
     icon: Video,

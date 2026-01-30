@@ -66,7 +66,7 @@ export function HeroSection() {
             <Button variant="outline" size="lg" asChild className="w-full sm:w-auto bg-transparent">
               <Link href="#overview">
                 <Play className="mr-2 h-4 w-4" />
-                Watch the 90-Second Overview
+                Watch the 3-Minute Overview
               </Link>
             </Button>
           </motion.div>

@@ -7,6 +7,11 @@ import { ArrowRight, User } from "lucide-react"
 
 const coaches = [
   {
+    name: "Sophia",
+    role: "Chief Operating Officer (COO) & Director of Enrollment",
+    specialty: "Operations & Enrollment",
+  },
+  {
     name: "Azam",
     role: "1:1 Coach",
     specialty: "Live Streaming & High-Volume Sales",
@@ -35,7 +40,7 @@ const coaches = [
 
 export function CoachesPreviewSection() {
   return (
-    <section className="bg-secondary/30 py-20 sm:py-28">
+    <section id="coaches" className="bg-secondary/30 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -52,7 +57,7 @@ export function CoachesPreviewSection() {
           </p>
         </motion.div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {coaches.map((coach, index) => (
             <motion.div
               key={index}
@@ -67,7 +72,6 @@ export function CoachesPreviewSection() {
               </div>
               <h3 className="mt-4 text-lg font-semibold text-foreground">{coach.name}</h3>
               <p className="text-sm text-primary">{coach.role}</p>
-              <p className="mt-2 text-sm text-muted-foreground">{coach.specialty}</p>
             </motion.div>
           ))}
         </div>

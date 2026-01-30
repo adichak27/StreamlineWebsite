@@ -7,9 +7,9 @@ import { Button } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
 
 const navLinks = [
-  { href: "/program", label: "Program" },
-  { href: "/coaches", label: "Coaches" },
+  { href: "/#coaches", label: "Coaches" },
   { href: "/prep", label: "Pre-Call Prep" },
+  { href: "/#faq", label: "FAQ" },
 ]
 
 export function Header() {
@@ -41,11 +41,8 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 md:flex">
-          <Button variant="ghost" size="sm" asChild>
-            <Link href="/apply">Apply Now</Link>
-          </Button>
           <Button size="sm" asChild>
-            <Link href="/prep">Confirm My Call</Link>
+            <a href="https://form.typeform.com/to/C2ruNSz7#ref=adi" target="_blank" rel="noopener noreferrer">Apply Now</a>
           </Button>
         </div>
 
@@ -81,11 +78,8 @@ export function Header() {
                 </Link>
               ))}
               <div className="flex flex-col gap-2 pt-4">
-                <Button variant="outline" asChild className="w-full bg-transparent">
-                  <Link href="/apply">Apply Now</Link>
-                </Button>
                 <Button asChild className="w-full">
-                  <Link href="/prep">Confirm My Call</Link>
+                  <a href="https://form.typeform.com/to/C2ruNSz7#ref=adi" target="_blank" rel="noopener noreferrer">Apply Now</a>
                 </Button>
               </div>
             </div>

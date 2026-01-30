@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { PrepHero } from "@/components/prep/hero"
 import { VideoEmbed } from "@/components/prep/video-embed"
-import { PrepChecklist } from "@/components/prep/checklist"
+import { PreCallChecklistSection } from "@/components/sections/pre-call-checklist"
 import { PrepCTA } from "@/components/prep/cta"
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export default function PrepPage() {
     <>
       <PrepHero />
       <VideoEmbed />
-      <PrepChecklist />
+      <PreCallChecklistSection />
       <PrepCTA />
     </>
   )

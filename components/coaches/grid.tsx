@@ -2,8 +2,21 @@
 
 import { motion } from "framer-motion"
 import { User } from "lucide-react"
+import Link from "next/link"
 
 const coaches = [
+  {
+    name: "Sophia",
+    role: "Chief Operating Officer (COO) & Director of Enrollment",
+    specialty: "Operations & Enrollment",
+    bio: "Sophia is Streamline's Chief Operating Officer and Director of Enrollment, overseeing creator admissions and ensuring the program is reserved for individuals ready to execute at a high level.",
+    helps: [
+      "Assessing program alignment",
+      "Strategic enrollment guidance",
+      "Setting foundation for success",
+      "Ensuring high-level execution",
+    ],
+  },
   {
     name: "Azam",
     role: "1:1 Coach",
@@ -15,6 +28,11 @@ const coaches = [
       "Building consistent revenue streams",
       "Achieving record-breaking sales",
     ],
+    socialLinks: {
+      tiktok: "https://www.tiktok.com/@ecomazam?_r=1&_t=ZP-93ULWX7zrtH",
+      youtube: "https://youtube.com/@ecomazam?si=rggFOAcurWgTtFLD",
+      instagram: "https://www.instagram.com/ecomazam?igsh=bWs3bWkzY2cxbHc1",
+    },
   },
   {
     name: "Michael",
@@ -67,8 +85,22 @@ const coaches = [
 
 export function CoachesGrid() {
   return (
-    <section className="bg-secondary/30 py-20 sm:py-28">
+    <section id="coaches" className="bg-secondary/30 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            Meet the Coaches and Staff
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Learn from people who&apos;ve actually built successful TikTok Shop businesses
+          </p>
+        </motion.div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {coaches.map((coach, index) => (
             <motion.div
@@ -86,7 +118,6 @@ export function CoachesGrid() {
                 <div>
                   <h3 className="text-lg font-semibold text-foreground">{coach.name}</h3>
                   <p className="text-sm text-primary">{coach.role}</p>
-                  <p className="mt-1 text-sm text-muted-foreground">{coach.specialty}</p>
                 </div>
               </div>
 

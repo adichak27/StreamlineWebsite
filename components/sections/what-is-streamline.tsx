@@ -26,7 +26,7 @@ export function WhatIsStreamlineSection() {
               What Streamline Actually Is
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
-              No fluff. No guru tactics. Just a proven system that works.
+              No fluff. No guru tactics. Actual 1:1 help and a proven system that works.
             </p>
           </motion.div>
 

@@ -2,10 +2,9 @@ import Link from "next/link"
 
 const footerLinks = {
   program: [
-    { href: "/program", label: "How It Works" },
     { href: "/coaches", label: "Meet the Coaches" },
     { href: "/prep", label: "Pre-Call Prep" },
-    { href: "/apply", label: "Apply Now" },
+    { href: "https://form.typeform.com/to/C2ruNSz7#ref=adi", label: "Apply Now", external: true },
   ],
   resources: [
     { href: "/#faq", label: "FAQ" },
@@ -36,12 +35,23 @@ export function Footer() {
             <ul className="mt-4 space-y-3">
               {footerLinks.program.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-muted-foreground transition-colors hover:text-primary"
-                  >
-                    {link.label}
-                  </Link>
+                  {link.external ? (
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-sm text-muted-foreground transition-colors hover:text-primary"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

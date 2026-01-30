@@ -6,11 +6,12 @@ import { motion } from "framer-motion"
 import { CheckSquare, Target } from "lucide-react"
 
 const checklistItems = [
-  "Your TikTok @username",
   "What niche you're in (or want to be in)",
   "How much time you have per week to commit",
   "Your goal for the next 30 days",
   "Your biggest blocker right now",
+  "Laptop with camera on and ready",
+  "A quiet space for the call",
 ]
 
 export function PreCallChecklistSection() {
