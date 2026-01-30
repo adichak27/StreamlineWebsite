@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 
 const trustItems = [
   { icon: Calendar, label: "1:1 Coaching Sessions" },
-  { icon: Search, label: "Producw Research System" },
+  { icon: Search, label: "Product Research System" },
   { icon: FileText, label: "Livestream Scripts" },
   { icon: Users, label: "Personalized Feedback" },
 ]
@@ -31,7 +31,7 @@ export function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 4.0 }}
+            transition={{ duration: 0.5, delay: 4.5 }}
           >
             <span className="inline-block rounded-full border border-primary/30 bg-gradient-to-r from-primary/20 via-primary/15 to-primary/20 px-4 py-1.5 text-sm font-medium text-primary backdrop-blur-sm">
               1:1 Livestream Coaching Program
@@ -41,7 +41,7 @@ export function HeroSection() {
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 4.1 }}
+            transition={{ duration: 0.5, delay: 4.6 }}
             className="mt-8 text-balance text-4xl font-bold tracking-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] sm:text-5xl lg:text-6xl"
           >
             Streamline — The complete system for winning on TikTok Shop.
@@ -50,7 +50,7 @@ export function HeroSection() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 4.3 }}
+            transition={{ duration: 0.5, delay: 4.8 }}
             className="mt-10 flex flex-col items-start gap-4 sm:flex-row"
           >
             <Button size="lg" asChild className="w-full sm:w-auto">
@@ -71,7 +71,7 @@ export function HeroSection() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 4.4 }}
+          transition={{ duration: 0.5, delay: 4.9 }}
           className="mt-20 -translate-x-4"
         >
           <div className="rounded-2xl border border-primary/20 bg-gradient-to-br from-card/80 via-card/60 to-card/80 p-6 backdrop-blur-sm shadow-lg shadow-primary/5">

@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useEffect, useRef } from "react"
 import { ClipboardCheck, Search, Clapperboard, MessageSquare, TrendingUp } from "lucide-react"
 
 const steps = [
@@ -37,13 +38,37 @@ const steps = [
 ]
 
 export function HowItWorksSection() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (video) {
+      // Seek to 2 seconds and pause to show a static frame
+      video.currentTime = 2
+      video.addEventListener('loadeddata', () => {
+        video.currentTime = 2
+        video.pause()
+      })
+    }
+  }, [])
+
   return (
     <section 
       id="how-it-works" 
       className="relative overflow-hidden bg-gradient-to-b from-background via-primary/3 to-primary/6 py-20 sm:py-28"
     >
+      {/* Video frame at 0:02 as background image */}
+      <video
+        ref={videoRef}
+        muted
+        playsInline
+        className="absolute inset-0 h-full w-full object-cover z-0 opacity-40 translate-x-[30%]"
+      >
+        <source src="/tiktok_animated.mp4" type="video/mp4" />
+      </video>
+      
       {/* Soft teal radial glow - center */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-[1]">
         <div 
           className="h-[700px] w-[700px] rounded-full blur-[140px] opacity-35"
           style={{
@@ -52,7 +77,7 @@ export function HowItWorksSection() {
         />
       </div>
       
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-[2]">
         <motion.div
           initial={{ opacity: 0, y: 40, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
